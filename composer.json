@@ -6,9 +6,9 @@
         "version": "1.0",
         "license": "MIT",
         "source": {
-            "url": "https://github.com/example-package-name.git", //git url
+            "url": "https://github.com/ugurethemaydin/slimCache",
             "type": "git",
-            "reference": "master" //git branch-name
+            "reference": "master"
         }
     }
 }], "authors": [{
@@ -19,6 +19,6 @@
         "UEA\\SlimCache\\": "src/"
     }
 }, "require": {
-    "slim/slim": "^3.0"
+    "slim/slimcache": "^3.0"
 }
 }
