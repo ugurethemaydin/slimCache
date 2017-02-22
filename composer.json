@@ -1,0 +1,20 @@
+{
+  "name": "ugurethemaydin/slimcache",
+  "description": "File based cache system of slim 3 php frameworks.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Uğur Ethem AYDIN",
+      "email": "me@ugur.me"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "UEA\\SlimCache\\" : "src/"
+    }
+  },
+  "require": {
+    "slim/slim": "^3.0"
+  }
+}
