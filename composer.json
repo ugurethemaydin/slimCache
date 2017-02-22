@@ -1,11 +1,11 @@
 {
-   "name": "uea/slimcache",
+    "name": "uea/slimcache",
     "type": "library",
     "description": "File based cache system of slim 3 php frameworks.",
     "keywords": ["filecache", "file", "slim", "framework", "middleware", "cache"],
     "homepage": "http://ugur.me",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [{
         "name": "Uğur Ethem AYDIN",
         "email": "me@ugur.me",
