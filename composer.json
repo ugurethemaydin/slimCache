@@ -1,21 +1,15 @@
 {
-    "repositories": [{
-        "type": "package",
-        "package": {
-            "name": "uea/slimcache",
-            "description": "File based cache system of slim 3 php frameworks.",
-            "version": "1.0",
-            "license": "MIT",
-            "source": {
-                "url": "https://github.com/ugurethemaydin/slimCache",
-                "type": "git",
-                "reference": "master"
-            }
-        }
-    }],
+   "name": "uea/slimcache",
+    "type": "library",
+    "description": "File based cache system of slim 3 php frameworks.",
+    "keywords": ["filecache", "file", "slim", "framework", "middleware", "cache"],
+    "homepage": "http://ugur.me",
+    "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [{
         "name": "Uğur Ethem AYDIN",
-        "email": "me@ugur.me"
+        "email": "me@ugur.me",
+        "homepage": "http://ugur.me"
     }],
     "autoload": {
         "psr-4": {
@@ -23,6 +17,6 @@
         }
     },
     "require": {
-        "slim/slim": "^3.0"
+        "slim/slim": "^3.7"
     }
 }
