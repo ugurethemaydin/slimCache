@@ -17,9 +17,9 @@ class FileHandler
      * @throws CacheFileSystemException
      */
     public function write (FileStructure $file){
-        $success=file_put_contents($this->getRouteCachePath($file->getName()), $file->toString());
+        $success=file_put_contents($this->getNameCachePath($file->getName()), $file->toString());
         if($success === FALSE){
-            throw new CacheFileSystemException("Unable to save Cache file to disk in file ".$this->getRouteCachePath($file->getRoute()));
+            throw new CacheFileSystemException("Unable to save Cache file to disk in file ".$this->getNameCachePath($file->getName()));
         }
     }
 
@@ -33,8 +33,7 @@ class FileHandler
      */
     public function read ($name){
         $name=forceMD5($name);
-        dd($name);
-        $routePath=$this->getRouteCachePath($name);
+        $routePath=$this->getNameCachePath($name);
         if(!file_exists($routePath)){
             return FALSE;
         }
@@ -54,10 +53,11 @@ class FileHandler
      * @param $name
      */
     public function delete ($name){
-        dd($name);
-        if(file_exists($this->getRouteCachePath($route))){
-            unlink($this->getRouteCachePath($route));
+        if(file_exists($this->getNameCachePath($name))){
+            unlink($this->getNameCachePath($name));
+            return true;
         }
+        return false;
     }
 
 
@@ -80,6 +80,6 @@ class FileHandler
      * @return string
      */
     public function getNameCachePath ($name){
-        return $this->directory.'/'.$route;
+        return $this->directory.'/'.$name;
     }
 }

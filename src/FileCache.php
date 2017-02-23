@@ -10,7 +10,7 @@
  * @package UEA\SlimCache
  */
 namespace UEA\SlimCache;
-
+require_once 'UEAHelper.php';
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\App;
@@ -136,8 +136,8 @@ class FileCache
      * @param $cacheKey
      */
     public function remove ($name){
-        if(!isValidMd5($name)) $name=md5($name);
-        $this->fileHandler->delete($name);
+        $name=forceMD5($name);
+        return $this->fileHandler->delete($name);
     }
 }
 
