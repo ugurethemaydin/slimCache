@@ -11,7 +11,7 @@ So a file based cache made a lot of sense.
 
 Installation is done via composer
 ```php
-composer require uea/slimcache
+composer require uea/slimcache dev-master
 ```
 
 ## Requirements
