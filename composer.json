@@ -18,7 +18,7 @@
             "UEA\\SlimCache\\" : "src/"
         } ,
         "files" : [
-            "src/UEAHelpers.php"
+            "src/UEAHelper.php"
         ]
     } ,
     "require" : {
